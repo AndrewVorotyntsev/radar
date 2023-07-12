@@ -11,8 +11,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: const MyHomePage(title: 'R. A. D. A. R.'),
+    return const MaterialApp(
+      home: MyHomePage(title: 'R. A. D. A. R.'),
     );
   }
 }
@@ -70,41 +70,41 @@ class _MyHomePageState extends State<MyHomePage>
                 Container(
                   height: 200,
                   width: 200,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.black,
                     shape: BoxShape.circle,
                   ),
                 ),
                 // Разметка
-                // Center(
-                //   child: Container(
-                //     height: 150,
-                //     width: 150,
-                //     decoration: BoxDecoration(
-                //         border: Border.all(color: Colors.white, width: 1),
-                //         color: Colors.black,
-                //         shape: BoxShape.circle),
-                //   ),
-                // ),
-                // Center(
-                //   child: Container(
-                //     height: 100,
-                //     width: 100,
-                //     decoration: BoxDecoration(
-                //         border: Border.all(color: Colors.white, width: 1),
-                //         color: Colors.black,
-                //         shape: BoxShape.circle),
-                //   ),
-                // ),
-                // Center(
-                //   child: Container(
-                //     height: 50,
-                //     width: 50,
-                //     decoration: BoxDecoration(
-                //         border: Border.all(color: Colors.white, width: 1),
-                //         shape: BoxShape.circle),
-                //   ),
-                // ),
+                Center(
+                  child: Container(
+                    height: 150,
+                    width: 150,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.green, width: 1),
+                        color: Colors.black,
+                        shape: BoxShape.circle),
+                  ),
+                ),
+                Center(
+                  child: Container(
+                    height: 100,
+                    width: 100,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.green, width: 1),
+                        color: Colors.black,
+                        shape: BoxShape.circle),
+                  ),
+                ),
+                Center(
+                  child: Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.green, width: 1),
+                        shape: BoxShape.circle),
+                  ),
+                ),
                 AnimatedBuilder(
                   animation: _radarController,
                   builder: (context, child) {
@@ -116,11 +116,11 @@ class _MyHomePageState extends State<MyHomePage>
                         width: 100,
                         decoration: BoxDecoration(
                           color: Colors.green.withOpacity(0.1),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(color: Colors.green, blurRadius: 50)
                           ],
-                          borderRadius:
-                              BorderRadius.only(topLeft: Radius.circular(100)),
+                          borderRadius: const BorderRadius.only(
+                              topLeft: Radius.circular(100)),
                         ),
                       ),
                     );
@@ -149,7 +149,7 @@ class _MyHomePageState extends State<MyHomePage>
               ],
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Row(
@@ -160,9 +160,9 @@ class _MyHomePageState extends State<MyHomePage>
                 onPressed: () {
                   _radarController.stop();
                 },
-                child: Icon(Icons.stop),
+                child: const Icon(Icons.stop),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 10,
               ),
               ElevatedButton(
@@ -170,11 +170,11 @@ class _MyHomePageState extends State<MyHomePage>
                 onPressed: () {
                   _radarController.repeat();
                 },
-                child: Icon(Icons.play_arrow),
+                child: const Icon(Icons.play_arrow),
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           ),
           Slider(

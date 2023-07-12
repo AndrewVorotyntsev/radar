@@ -2,9 +2,7 @@
 
 Явная анимация радара на Flutter
 
-
-
-https://github.com/AndrewVorotyntsev/radar/assets/48821142/e46bf3dd-b27b-46fb-88ae-1d7d0da9efda
+https://github.com/AndrewVorotyntsev/radar/assets/48821142/6eea2903-571e-40ff-b211-342f408dcdfd
 
 
 
